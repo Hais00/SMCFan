@@ -1,4 +1,3 @@
-
 # SMCFan CLI
 
 SMCFan CLI is a command-line tool for managing and monitoring the speed and mode of system fans. It allows users to list available fans, set their speed, or adjust their operating mode.
@@ -24,7 +23,7 @@ SMCFan CLI is a command-line tool for managing and monitoring the speed and mode
 ### General Command Syntax
 
 ```bash
-SMCFan [OPTIONS]
+./SMCFan [OPTIONS]
 ```
 
 ### Options
@@ -42,20 +41,28 @@ SMCFan [OPTIONS]
 #### List All Fans
 
 ```bash
-SMCFan --list
+./SMCFan --list
 ```
 
 **Output example:**
 ```
-ID  Current Speed   Min Speed   Max Speed   Mode
-0   1200 RPM        800 RPM     2000 RPM    automatic
-1   1500 RPM        900 RPM     2500 RPM    forced
+ID: 0
+Current Speed: 1200 RPM
+Min Speed: 800 RPM
+Max Speed: 2000 RPM
+Mode: automatic
+
+ID: 1
+Current Speed: 1500 RPM
+Min Speed: 900 RPM
+Max Speed: 2500 RPM
+Mode: forced
 ```
 
 #### Set Fan to Automatic Mode
 
 ```bash
-SMCFan --fan 0 --mode automatic
+sudo ./SMCFan --fan 0 --mode automatic
 ```
 
 **Output:**
@@ -66,7 +73,7 @@ Fan 0 mode set to automatic.
 #### Set Fan Speed
 
 ```bash
-SMCFan --fan 1 --speed 1800
+sudo ./SMCFan --fan 1 --speed 1800
 ```
 
 **Output:**
@@ -77,7 +84,7 @@ Fan 1 speed set to 1800 RPM.
 #### Display Help
 
 ```bash
-SMCFan --help
+./SMCFan --help
 ```
 
 ---
